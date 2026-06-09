@@ -1,16 +1,7 @@
-ID solicitud;Legajo;Nombre;Fecha inicio;Fecha fin;Días solicitados;Estado
-SOL-001;1024;Sofia Martinez;2026-06-15;2026-06-22;7;Aprobada
-SOL-002;1028;Martina Lopez;2026-07-01;2026-07-10;9;Rechazada
-SOL-003;1026;Valentina Gómez;2026-08-03;2026-08-07;5;Pendiente
-SOL-004;1029;Santiago Castro;2026-06-15;2026-06-30;15;Aprobada
-SOL-005;1031;Facundo Díaz;2026-09-10;2026-09-15;5;Rechazada
-1024,Sofia martinez,14/05/2026,19/05/2026,5,Aprobada
-1026,Valentina Gómez,15/05/2026,19/05/2026,4,Aprobada
-1025,Mateo Rossi,15/05/2026,03/06/2026,19,Pendiente
-1029,Santiago Castro,15/05/2026,19/05/2026,4,Aprobada
-1024,Sofia martinez,15/05/2026,29/05/2026,14,Aprobada
-1029,Santiago Castro,15/05/2026,27/05/2026,12,Aprobada
-1024,Sofia martinez,15/05/2026,28/05/2026,13,Aprobada
-1029,Santiago Castro,15/05/2026,29/05/2026,14,Pendiente
-1024,Sofia martinez,16/05/2026,16/05/2026,0,Pendiente
-1024,Sofia martinez,15/05/2026,17/05/2026,2,Pendiente
+ID solicitud;Legajo;Nombre;Fecha inicio;Fecha fin;DÃ­as solicitados;Estado
+1024;Sofia Martinez;2026-06-15;2026-06-22;7;Aprobada
+1028;Martina Lopez;2026-07-01;2026-07-10;9;Rechazada
+1026;Valentina GÃ³mez;2026-08-03;2026-08-07;5;Pendiente
+1029;Santiago Castro;2026-06-15;2026-06-30;15;Aprobada
+1031;Facundo DÃ­az;2026-09-10;2026-09-15;5;Rechazada
+
