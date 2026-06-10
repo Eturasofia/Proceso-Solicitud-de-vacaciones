@@ -3,7 +3,10 @@
 #Definir funciones para el uso de la base de datos
 
 #Primera funcion: confirmar que el legajo exista
-
+# -*- coding: utf-8 -*-
+import sys
+import io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 import csv
 from datetime import datetime
 
@@ -23,8 +26,8 @@ def calcular_dias(fecha_inicio, fecha_fin):
     try:
         inicio = datetime.strptime(fecha_inicio.strip(), "%d/%m/%Y")
         fin = datetime.strptime(fecha_fin.strip(),"%d/%m/%Y")
-        cantidad = fin - inicio
-        return cantidad.days
+        cantidad = fin - inicio 
+        return cantidad.days + 1
     except ValueError as e:
         return None
 
@@ -36,7 +39,7 @@ def chequear_area(area, fecha_inicio, fecha_fin):
         next(leer)
         for fila in leer:
             if fila[2]:
-                if fila[2] == area:
+                  if fila[2] == area:
                     ausencia_inicio = datetime.strptime(fila[3], "%Y-%m-%d")
                     ausencia_fin = datetime.strptime(fila[4], "%Y-%m-%d")
                     inicio = datetime.strptime(fecha_inicio,"%d/%m/%Y")
@@ -92,7 +95,9 @@ while True:
         if dias is None:
             print("Vaqui: Formato de fecha incorrecto, ingresa la fecha de fin nuevamente:")
             estado = "ESPERANDO FECHA DE FIN"
-
+        elif dias <= 0:
+            print("Vaqui: Ingrese una fecha posterior a la fecha de inicio.")
+            estado = "ESPERANDO FECHA DE FIN"
          #Verificamos si tiene saldo suficiente   
         elif dias > int(colaborador[3]):
             print("Vaqui: No tenés saldo suficiente. Solicitud rechazada.") #rechaza si no alcanza con los dias disponibles
