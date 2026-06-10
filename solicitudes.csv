@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-Legajo;Nombre;Fecha inicio;Fecha fin;D�as solicitados;Estado
+Legajo;Nombre;Fecha inicio;Fecha fin;Días solicitados;Estado
 1024;Sofia Martinez;2026-06-15;2026-06-22;7;Aprobada
 1028;Martina Lopez;2026-07-01;2026-07-10;9;Rechazada
 1026;Valentina Gómez;2026-08-03;2026-08-07;5;Pendiente
 1029;Santiago Castro;2026-06-15;2026-06-30;15;Aprobada
 1031;Facundo Díaz;2026-09-10;2026-09-15;5;Rechazada
 
-=======
-ID solicitud;Legajo;Nombre;Fecha inicio;Fecha fin;Días solicitados;Estado
-1024;Sofia Martinez;2026-06-15;2026-06-22;7;Aprobada
-1028;Martina Lopez;2026-07-01;2026-07-10;9;Rechazada
-1026;Valentina Gómez;2026-08-03;2026-08-07;5;Pendiente
-1029;Santiago Castro;2026-06-15;2026-06-30;15;Aprobada
-1031;Facundo Díaz;2026-09-10;2026-09-15;5;Rechazada
 
->>>>>>> f92fb84f6c8f11a9c96e706d2e0f98b8f1875f43
+

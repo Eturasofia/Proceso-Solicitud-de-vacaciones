@@ -38,7 +38,7 @@ def chequear_area(area, fecha_inicio, fecha_fin):
         leer = csv.reader(archivo, delimiter=";")
         next(leer)
         for fila in leer:
-            if fila[2]:
+            if len(fila) > 2 and fila[2]:
                   if fila[2] == area:
                     ausencia_inicio = datetime.strptime(fila[3], "%Y-%m-%d")
                     ausencia_fin = datetime.strptime(fila[4], "%Y-%m-%d")
@@ -100,17 +100,20 @@ while True:
             estado = "ESPERANDO FECHA DE FIN"
          #Verificamos si tiene saldo suficiente   
         elif dias > int(colaborador[3]):
-            print("Vaqui: No tenés saldo suficiente. Solicitud rechazada.") #rechaza si no alcanza con los dias disponibles
+            print("Vaqui: No tenés saldo suficiente. Solicitud rechazada.") 
             estado = "FIN"
+            break
         elif dias > 15:
             print("Vaqui: Tu solicitud supera los 15 días, se deriva a Gerencia.")
             registrar_solicitud(colaborador[0], colaborador[1], fecha_inicio, fecha_fin, dias, "Pendiente") #Deja en pendiente si la solicitud supera los 15 dias
             estado = "FIN"
+            break
         else:
             if chequear_area(colaborador[2], fecha_inicio, fecha_fin): #Verifica si alguien de su area ya esta de vacaciones para no supoerponer
                 print("Vaqui: Hay un compañero de tu área de licencia, se deriva a Gerencia.") 
                 registrar_solicitud(colaborador[0], colaborador[1], fecha_inicio, fecha_fin, dias, "Pendiente")
                 estado = "FIN"
+                break
             else:
                 print("Vaqui: Tu solicitud fue aprobada automaticamente!")
                 registrar_solicitud(colaborador[0], colaborador[1], fecha_inicio, fecha_fin, dias, "Aprobada")
